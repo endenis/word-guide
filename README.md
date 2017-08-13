@@ -9,6 +9,10 @@ It can be used with output of this POS tagger and lemmatizer: [http://staffwww.d
 
 `ruby word_stats.rb input.txt > output.txt`
 
+It can also be run with a list of already known words:
+
+`ruby word_stats.rb input.txt known_words.txt > output.txt`
+
 ## Requirements
 
 This tool was developed with Ruby 2.3.1. Other Ruby versions were not tested.
