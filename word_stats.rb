@@ -8,7 +8,8 @@ vocabulary = {}
 
 File.open(file_name).each do |raw_line|
   line = raw_line.chomp
-  word, pos, lemma = line.split "\t"
+  word, pos, raw_lemma = line.split "\t"
+  lemma = raw_lemma.downcase
   unless POS_BLACKLIST.include?(pos) || LEMMA_BLACKLIST.include?(lemma)
     vocabulary[lemma] ||= 0
     vocabulary[lemma] += 1 
